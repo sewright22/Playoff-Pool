@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:Playoff_Pool.Views"
+             mc:Ignorable="d"
+             x:Class="Playoff_Pool.Views.CustomBottomTabbedPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ContentView x:Name="Detail"
+                         Grid.ColumnSpan="4"/>
+            
+            <views:CustomTab IconName="{StaticResource HomeIcon}"
+                             LabelText="Home"
+                             Grid.Row="1"
+                             Grid.Column="0">
+                <views:CustomTab.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </views:CustomTab.GestureRecognizers>
+            </views:CustomTab>
+
+            <views:CustomTab IconName="{StaticResource MyPicksIcon}"
+                             LabelText="My Picks"
+                             Grid.Row="1"
+                             Grid.Column="1">
+                <views:CustomTab.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </views:CustomTab.GestureRecognizers>
+            </views:CustomTab>
+
+            <views:CustomTab IconName="{StaticResource HistoryIcon}"
+                             LabelText="History"
+                             Grid.Row="1"
+                             Grid.Column="2">
+                <views:CustomTab.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                </views:CustomTab.GestureRecognizers>
+            </views:CustomTab>
+
+            <views:CustomTab IconName="{StaticResource TrophyIcon}"
+                             LabelText="Leaderboards"
+                             Grid.Row="1"
+                             Grid.Column="3">
+                <views:CustomTab.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
+                </views:CustomTab.GestureRecognizers>
+            </views:CustomTab>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

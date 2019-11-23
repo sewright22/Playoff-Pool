@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:Playoff_Pool.Views"
+             mc:Ignorable="d"
+             x:Class="Playoff_Pool.Views.NFCView">
+  <ContentView.Content>
+        <Frame BackgroundColor="Blue"
+               Margin="5"
+               HasShadow="True">
+            <StackLayout>
+
+                <Label HorizontalOptions="CenterAndExpand"
+                       Text="WildCard Round"
+                       TextColor="White"
+                       FontSize="Medium" />
+
+                <views:SelectTeamView x:Name="AFCWildCardGame1"
+                                      HomeTeam="{Binding AFCWildCardGame1HomeTeam}"
+                                      AwayTeam="{Binding AFCWildCardGame1AwayTeam}"
+                                      HomeTeamIsSelected="{Binding AFCWildCardGame1HomeTeamIsSelected}"
+                                      AwayTeamIsSelected="{Binding AFCWildCardGame1AwayTeamIsSelected}" />
+
+                <views:SelectTeamView x:Name="AFCWildCardGame2"
+                                      HomeTeam="{Binding AFCWildCardGame2HomeTeam}"
+                                      AwayTeam="{Binding AFCWildCardGame2AwayTeam}"
+                                      AwayTeamIsSelected="True" />
+
+                <views:SelectTeamView x:Name="AFCDivisionalGame1"
+                                      HomeTeam="{Binding AFCDivisionalGame1HomeTeam}"
+                                      AwayTeam="{Binding AFCDivisionalGame1AwayTeam}"
+                                      HomeTeamIsSelected="True" />
+
+                <views:SelectTeamView x:Name="AFCDivisionalGame2"
+                                      HomeTeam="{Binding AFCDivisionalGame2Hometeam}"
+                                      AwayTeam="{Binding AFCDivisionalGame22AwayTeam}"
+                                      AwayTeamIsSelected="True" />
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

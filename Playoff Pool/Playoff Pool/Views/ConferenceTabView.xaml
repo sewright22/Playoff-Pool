@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Playoff_Pool.Views.ConferenceTabView">
+  <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="AFCLabel"
+                   Text="          AFC          "
+                   Grid.Column="0" 
+                   FontSize="Title"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="NFCLabel"
+                   Text="          NFC          "
+                   Grid.Column="1"
+                   FontSize="Title"
+                   HorizontalTextAlignment="Center" />
+
+            <ContentView x:Name="Detail"
+                         Grid.Row="1"
+                         Grid.ColumnSpan="2">
+                <ContentView.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Left" Swiped="OnSwipedLeft"/>
+                    <SwipeGestureRecognizer Direction="Right" Swiped="OnSwipedRight"/>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
